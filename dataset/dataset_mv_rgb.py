@@ -108,12 +108,12 @@ class MvRgbDatasetBase(Dataset):
             pose_idx = kwargs['pose_idx'] if 'pose_idx' in kwargs else pose_idx
             view_idx = kwargs['view_idx'] if 'view_idx' in kwargs else view_idx
             data_idx = (pose_idx, view_idx)
-            if not training:
-                print('data index: (%d, %d)' % (pose_idx, view_idx))
+            # if not training:
+            #     print('data index: (%d, %d)' % (pose_idx, view_idx))
         else:  # testing
             pose_idx = self.pose_list[index]
             data_idx = pose_idx
-            print('data index: %d' % pose_idx)
+            # print('data index: %d' % pose_idx)
 
         # SMPL
         with torch.no_grad():
