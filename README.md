@@ -104,3 +104,7 @@ This python file should contain, such as in the example, a function `load_model(
 
 This function is the one to be loaded by main_avatar.py, and that will instantiate your whole AvatarNet, that is responsible for the rendering and includes the various neural networks.
 This way, you should be able to plug freely your own AvatarNet, as long as it is self-contained enough.
+
+#### Warning
+
+For every avatar, the camera 7 and 13 were excluded from training as a test set; please do not cheat by training on the test set.
