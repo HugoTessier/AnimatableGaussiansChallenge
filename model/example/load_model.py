@@ -6,7 +6,12 @@ import torch
 os.environ['OPENCV_IO_ENABLE_OPENEXR'] = '1'
 
 
-def load_model(avatar, device):
+def load_model(avatar:str, device:str):
+    """
+    :param avatar: Avatar whose model to load, among "zzr", "lbn1" and "lbn2".
+    :param device: Device on which to lead the model, such as "cpu" or "cuda"
+    :return: Your model, with at least the get_pose_map() method and the render(items, bg_color=(1., 1., 1.), use_pca=False) method.
+    """
     path = os.path.dirname(os.path.abspath(__file__))
 
     if avatar == "zzr":
